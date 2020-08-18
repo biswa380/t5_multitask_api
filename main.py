@@ -28,7 +28,7 @@ def generateAnswer(context, question):
     })
 
 model = T5ForConditionalGeneration.from_pretrained('t5-small')
-tokenizer = T5Tokenizer.from_pretrained('t5-small')
+tokenizer = T5Tokenizer.from_pretrained('tromedlov/t5-small-cnn')
 device = torch.device('cpu')
 
 @app.route("/summarize/<text>") 
