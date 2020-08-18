@@ -27,8 +27,8 @@ def generateAnswer(context, question):
     "context": context
     })
 
-model = T5ForConditionalGeneration.from_pretrained('mrm8488/t5-small-finetuned-AESLC-summarization')
-tokenizer = T5Tokenizer.from_pretrained('mrm8488/t5-small-finetuned-AESLC-summarization')
+model = T5ForConditionalGeneration.from_pretrained('valhalla/t5-small-qa-qg-hl')
+tokenizer = T5Tokenizer.from_pretrained('valhalla/t5-small-qa-qg-hl')
 device = torch.device('cpu')
 
 @app.route("/summarize/<text>") 
