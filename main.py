@@ -16,7 +16,7 @@ nltk.download('punkt')
 
 tokenizer = AutoTokenizer.from_pretrained("valhalla/t5-small-qa-qg-hl")
 
-model = AutoModelWithLMHead.from_pretrained("valhalla/t5-small-qa-qg-hl")
+model = AutoModelForCausalLM.from_pretrained("valhalla/t5-small-qa-qg-hl")
 
 nlp = pipeline("multitask-qa-qg")
 
